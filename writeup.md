@@ -19,7 +19,7 @@ The goals / steps of this project are the following:
 [image3]: ./test_images/00013.JPG "Traffic Sign 2"
 [image4]: ./test_images/00014.jpeg "Traffic Sign 3"
 [image5]: ./test_images/00035.jpg "Traffic Sign 4"
-[image6]: ./test_images/00023.jpg "Traffic Sign 5"
+[image6]: ./test_images/0023.jpg "Traffic Sign 5"
 
 
 1) Data Set Summary & Exploration:
