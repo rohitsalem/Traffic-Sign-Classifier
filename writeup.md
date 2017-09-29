@@ -110,7 +110,7 @@ I used a simple architecture with 5 convolutional layers compared to the 2 convo
 
 The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 100%. 
 
-3. For the First and the Third images surprisingly the predictions came be a perfect 1 , that is mostly beacause of the rounding of to 3 decimal places. And also for the other images expect the 5th one it is obtained that the prediction probabilities are greater that 0.99. So it wouldn't be useful to comapre the softmax probabilities of the first four images  
+3. For the First and the Third images surprisingly the predictions came be a perfect 1 , that is mostly beacause of the rounding of to 3 decimal places. And also for the other images expect the 5th one it is obtained that the prediction probabilities are greater that 0.99. So it wouldn't be useful to comapre the softmax probabilities of the first four images and therefore I just included the 5th image softmax predictions  
 
 For the Fifth image, the model is relatively sure that this is a Slippery road sign (probability of 0.986), and the image does contain a slippery road sign. The top five soft max probabilities were
 
