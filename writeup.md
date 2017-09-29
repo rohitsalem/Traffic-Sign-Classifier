@@ -14,12 +14,12 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-[image1]: ./examples/Distribution.jpg "Data Distribution"
-[image2]: ./test_images/00000.ppm "Traffic Sign 1"
-[image3]: ./test_images/00016.ppm "Traffic Sign 2"
-[image4]: ./test_images/00027.ppm "Traffic Sign 3"
-[image5]: ./test_images/00033.ppm "Traffic Sign 4"
-[image6]: ./test_images/00040.ppm "Traffic Sign 5"
+[image1]: ./Distribution.jpg "Data Distribution"
+[image2]: ./test_images/00018.jpg "Traffic Sign 1"
+[image3]: ./test_images/00013.JPG "Traffic Sign 2"
+[image4]: ./test_images/00014.jpeg "Traffic Sign 3"
+[image5]: ./test_images/00035.jpg "Traffic Sign 4"
+[image6]: ./test_images/00023.jpg "Traffic Sign 5"
 
 
 1) Data Set Summary & Exploration:
@@ -82,54 +82,45 @@ To train the model I used Adam optimizer and trained the model for 12 epochs wit
 4. I started with the LeNet architecture but could not obtain an accuracy more than 90 % on average per epoch and then trianed the data with model of 9 layers - 5 Convolutional and 4 Fully connected and was able to obtain an accuracy of 98.2 % on validation data. I also used dropout in few layers to prevent the model from overfitting.
 
 My final model results were:
- * Training set accuracy: 99.7787%
- * Validation set accuracy: 98.2540%
- * Testing set accuracy: 96.5717%
+* Training set accuracy: 99.6724%
+* Validation set accuracy: 97.8231%
+* Testing set accuracy: 96.5162%
 
-I used a simple architecture with 5 convolutional layers compared to the 2 convolutional layers in the LeNet architechture. As there were a large number of classes to classify (43) and many features in each classes to classify, a deep network is required and therefore I used 4 fully convoluted layers along with the convolutional layers. I avoided the overfitting by use of dropout in some layers after maxpooling and was able to obtain a validation accuracy of 98.2 %
+I used a simple architecture with 5 convolutional layers compared to the 2 convolutional layers in the LeNet architechture. As there were a large number of classes to classify (43) and many features in each classes to classify, a deep network is required and therefore I used 4 fully convoluted layers along with the convolutional layers. I avoided the overfitting by use of dropout in some layers after maxpooling and was able to obtain a validation accuracy of 97.8 %
 
 5. Testing a Model on New Images
 
-Here are five German traffic signs that I found on the web ( Actually taken from the online test data of the German competetion which is not a part of the downloaded):
+1. Here are five German traffic signs that I found on the web:
 
 ![alt text][image2] ![alt text][image3] ![alt text][image4] 
 ![alt text][image5] ![alt text][image6]
 
 
 
-####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
-
-Here are the results of the prediction:
+2. Here are the results of the prediction:
 
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Stop Sign      		| Stop sign   									| 
-| U-turn     			| U-turn 										|
-| Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
+| General Caution      		| General Caution   									| 
+| Yield     			| Yield 										|
+| Stop 					| Stop											|
+| Ahead Only	      		| Ahead Only					 				|
+| Slippery Road			|      Slippery road 							|
 
 
 The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 100%. 
 
-####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
+3. For the First and the Third images surprisingly the predictions came be a perfect 1 , that is mostly beacause of the rounding of to 3 decimal places. And also for the other images expect the 5th one it is obtained that the prediction probabilities are greater that 0.99. So it wouldn't be useful to comapre the softmax probabilities of the first four images  
 
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
-
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
+For the Fifth image, the model is relatively sure that this is a Slippery road sign (probability of 0.986), and the image does contain a slippery road sign. The top five soft max probabilities were
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
+| .9864         			| Slippery road   									| 
+| .0035     				|  				Wild animals crossing						|
+| .0027					|   Bicycles crossing									|
+| .0024	      			| 	 		Children crossing		|
+| .0020				    |     Beware of ice/snow  							|
 
-
-For the second image ... 
-
-### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
-####1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
-
-
+From the results above for the fifth image it shows that the network was able to classify the image as slippery road getting a probabilty of 98%.
+From the results about and the rest depicted in the notebook itself it is quite evident that the model is performing well!
