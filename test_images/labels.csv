@@ -1,6 +1,6 @@
 ClassId,SignName,filename
-0,Speed limit (20km/h),test_images/00000.ppm
-16,Vehicles over 3.5 metric tons prohibited,test_images/00016.ppm
-27,Pedestrians,test_images/00027.ppm
-33,Turn right ahead,test_images/00033.ppm
-40,Roundabout mandatory,test_images/00040.ppm
+18,general caution,test_images/00018.jpg
+13,yield,test_images/00013.JPG
+14,stop,test_images/00014.jpeg
+35,ahead only,test_images/00035.jpg
+23,slippery road,test_images/00023.jpg
