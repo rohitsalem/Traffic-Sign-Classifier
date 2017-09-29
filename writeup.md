@@ -19,6 +19,7 @@ The goals / steps of this project are the following:
 [image3]: ./test_images/00013.JPG "Traffic Sign 2"
 [image4]: ./test_images/00014.jpeg "Traffic Sign 3"
 [image5]: ./test_images/00035.jpg "Traffic Sign 4"
+[image6]: ./test_images/00023.jpg "Traffic Sign 5"
 
 
 1) Data Set Summary & Exploration:
@@ -92,7 +93,7 @@ I used a simple architecture with 5 convolutional layers compared to the 2 convo
 1. Here are five German traffic signs that I found on the web:
 
 ![alt text][image2] ![alt text][image3] ![alt text][image4] 
-![alt text][image5] 
+![alt text][image5] ![alt text][image6]
 
 
 
